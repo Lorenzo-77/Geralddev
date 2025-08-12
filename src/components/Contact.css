@@ -1,0 +1,127 @@
+/* ====== Layout ====== */
+.contact-section {
+  position: relative;
+  max-width: 1200px;
+  margin: 5.5rem auto 4rem auto;
+  padding: 0 1rem;
+  color: #fff;
+  isolation: isolate;
+}
+
+.contact-header { text-align: center; margin-bottom: 2rem; }
+.contact-title  { margin: 0; font-weight: 900; font-size: clamp(2.2rem, 5.5vw, 2.8rem); }
+.contact-subtitle {
+  margin: .5rem 0 0 0; color: #cfd8e3; font-weight: 600; letter-spacing: .2px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem; align-items: start;
+}
+
+/* ====== Aside ====== */
+.contact-aside-title {
+  font-weight: 800; margin: 0 0 .75rem 0; text-align: center;
+}
+.contact-actions {
+  display: flex; flex-wrap: wrap; gap: .6rem; align-items: center;
+}
+
+/* ====== Form ====== */
+.contact-form {
+  position: relative;
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  background: var(--glass-surface);
+  border: var(--glass-border);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: var(--glass-shadow);
+
+  display: grid;
+  gap: 1rem;
+}
+
+.form-field { margin-bottom: .25rem; }
+.form-field label {
+  display: block; font-weight: 600; margin-bottom: .4rem; color: #e6eef7;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  font-weight: 400;
+  color: #eaf2ff;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(181, 222, 247, 0.25);
+  border-radius: 12px;
+  padding: .8rem .9rem;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: #b9c7d6; }
+
+/* Select */
+.form-field select {
+  color: #eaf2ff;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--brand-celeste) 50%),
+    linear-gradient(135deg, var(--brand-celeste) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 4px),
+    calc(100% - 12px) calc(50% - 4px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  appearance: none;
+}
+.form-field select option { color: #111; background: #fff; }
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: rgba(181, 222, 247, 0.9);
+  box-shadow: 0 0 0 3px rgba(181, 222, 247, 0.25);
+  background: rgba(255,255,255,0.08);
+}
+
+/* Botón (estilo base en index.css) */
+.contact-submit {
+  justify-self: end;
+}
+.contact-status { margin-top: .25rem; font-weight: 700; }
+.contact-status.ok  { color: #7ee787; }
+.contact-status.err { color: #ffb4b4; }
+
+/* ====== Auroras fondo ====== */
+.contact-aurora {
+  position: absolute; width: 360px; height: 360px;
+  filter: blur(90px); z-index: -1; opacity: .55; pointer-events: none;
+}
+.contact-aurora--left {
+  top: -3rem; left: -6rem;
+  background: radial-gradient(circle at center, var(--brand-teal-600) 0%, var(--brand-teal-300) 50%, transparent 80%);
+}
+.contact-aurora--right {
+  bottom: -3rem; right: -4rem;
+  background: radial-gradient(circle at center, var(--brand-pink-600) 0%, var(--brand-pink-300) 50%, transparent 80%);
+}
+
+/* Centrar texto y botones en el aside */
+.contact-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centra horizontalmente */
+  justify-content: center; /* centra verticalmente si el contenedor es más alto */
+  text-align: center;
+}
+
+/* ====== Mobile ====== */
+@media (max-width: 768px) {
+  .contact-section { margin: 4rem auto 3rem auto; }
+  .contact-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .contact-aside { order: -1; }
+  .contact-actions { justify-content: center; }
+  .contact-submit { width: 100%; justify-self: stretch; }
+}

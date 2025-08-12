@@ -1,0 +1,18 @@
+/* src/components/Footer.css */
+.footer {
+  padding: 24px 16px;
+  margin-top: 64px;     /* separarlo del bloque anterior */
+  background: transparent;
+}
+.footer-bottom {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.copy {
+  margin: 0;
+  color: rgba(255,255,255,.8);
+  font-size: .98rem;
+  text-align: center;
+}

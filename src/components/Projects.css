@@ -1,0 +1,133 @@
+/* ===== Espaciado y encabezado de la sección ===== */
+.projects-section {
+  padding: clamp(40px, 6vw, 72px) 1rem;
+  margin-top: clamp(24px, 4vw, 56px);
+  position: relative;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: clamp(20px, 4vw, 36px);
+}
+
+.section-title {
+  margin: 0;
+  font-weight: 900;
+  font-size: clamp(2.2rem, 5.5vw, 2.8rem);
+}
+
+/* ===== Card principal ===== */
+.project-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) 1fr; /* imagen izq | texto der */
+  gap: clamp(16px, 3vw, 28px);
+  align-items: center;
+
+  padding: clamp(16px, 3vw, 28px);
+  border-radius: 18px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  backdrop-filter: blur(6px);
+}
+
+/* Bloque de imagen */
+.project-media {
+  border-radius: 14px;
+  overflow: hidden;
+  background: radial-gradient(70% 70% at 30% 20%, rgba(0,200,180,.12), transparent 60%),
+              rgba(255,255,255,0.02);
+  padding: 12px;
+}
+.project-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  filter: drop-shadow(0 10px 25px rgba(0,0,0,.25));
+}
+
+/* Contenido */
+.project-content { align-self: center; }
+
+.project-title {
+  margin: 0 0 .5rem 0;
+  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: .35rem;
+}
+.badge {
+  font-size: .8rem;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.project-lead {
+  margin: .5rem 0 1rem;
+  color: #dfe4f1;
+  line-height: 1.6;
+  max-width: 50ch;
+}
+
+/* CTA */
+.project-cta { display: flex; gap: .75rem; }
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .8rem 1.25rem;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #06091f;
+  background: rgba(181,222,247,0.9);
+  box-shadow: 0 0 18px rgba(181,222,247,.45);
+  border: 1px solid rgba(181,222,247,.75);
+  text-decoration: none;
+  transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
+}
+.project-button:hover { box-shadow: 0 0 26px rgba(181,222,247,.7); }
+.project-button:active { transform: translateY(1px); }
+
+/* Por si quedó la lista en el markup */
+.project-list { display: none !important; }
+
+/* ===== Responsive (único breakpoint) ===== */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: clamp(44px, 8vw, 60px) 1rem; /* un toque más de aire en mobile */
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;    /* apila */
+    text-align: center;
+  }
+
+  .project-media {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .project-content { margin-top: .35rem; }
+
+  .project-cta { justify-content: center; }
+
+  .project-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
