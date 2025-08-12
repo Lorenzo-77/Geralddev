@@ -32,7 +32,7 @@ export default function Testimonial() {
 
         <div className="testimonial-avatar">
           <div className="avatar-ring">
-            <img  src={`${import.meta.env.BASE_URL}/img/franco-meloni.webp`} alt="Franco Meloni" loading="lazy" />
+            <img  src={`${import.meta.env.BASE_URL}img/franco-meloni.webp`} alt="Franco Meloni" loading="lazy" />
           </div>
         </div>
       </div>

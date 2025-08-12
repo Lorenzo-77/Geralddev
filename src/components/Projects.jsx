@@ -28,7 +28,7 @@ export default function Projects() {
       <article className="project-card">
         <div className="project-media">
           <img
-            src={`${import.meta.env.BASE_URL}/img/Pro-Club.webp`}
+              src={`${import.meta.env.BASE_URL}img/Pro-Club.webp`}
             alt="ProClub — captura del sitio web del gimnasio"
             loading="lazy"
           />
