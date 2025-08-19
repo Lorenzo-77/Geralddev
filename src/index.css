@@ -3,8 +3,8 @@
 /* ================= TOKENS ================= */
 :root{
   /* Fondo */
-  --bg-dark-1: rgb(8, 10, 21);
-  --bg-dark-2: rgb(22, 26, 49);
+  --bg-dark-1:#000318;
+  --bg-dark-2: #000318;
 
   /* Marca / colores */
   --brand-teal-600: rgba(0,200,180,0.60);

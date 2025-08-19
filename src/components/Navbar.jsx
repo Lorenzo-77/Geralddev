@@ -6,7 +6,7 @@ const items = [
   { label: 'Inicio', id: 'inicio' },
   { label: 'Sobre Gerald.Dev', id: 'sobre' },
   { label: 'Servicios', id: 'servicios' },
-  { label: 'Proyectos', id: 'proyectos' },
+  { label: 'Trabajos', id: 'proyectos' },
   { label: 'Contacto', id: 'contacto' },
 ];
 
