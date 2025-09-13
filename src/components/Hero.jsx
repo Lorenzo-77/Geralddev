@@ -1,18 +1,20 @@
-import React from "react";
+import { useTranslation, Trans } from "react-i18next";
 import "./Hero.css";
 
-const Hero = () => {
+export default function Hero() {
+  useTranslation();
   return (
     <section id="inicio" className="hero-container">
       <h1 className="hero-title">
-        Construyendo <span className="celeste">experiencias</span> <br />
-        que marcan la <span className="rosa">diferencia</span>.
+        <Trans i18nKey="hero.title" components={[
+          <span className="celeste" />, // index 0
+          <br />,                      // index 1
+          <span className="rosa" />    // index 2
+        ]} />
       </h1>
       <p className="hero-subtitle">
-        Desarrollo Web y Apps Profesionales a Medida.
+        <Trans i18nKey="hero.subtitle" />
       </p>
     </section>
   );
-};
-
-export default Hero;
+}

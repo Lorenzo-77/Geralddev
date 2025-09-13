@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Gerald.Dev",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+"title": "Building <0>experiences</0><1/>that make a <2>difference</2>.",
+  "subtitle": "Professional Web & App Development Tailored for You."
+  },
+  "about": {
+    "title": "About <1>Gerald</1><3>.Dev</3>",
+    "p1": "At Gerald.Dev, we love turning ideas into digital solutions that truly work. We create custom web and mobile apps, designed to boost your business—without you having to deal with technical headaches.",
+    "p2": "We work closely with entrepreneurs and small businesses because we understand what you need and know how to take it to the next level: products that work, grow, and deliver results.",
+    "p3": "We keep you in the loop with clear, friendly communication—no nonsense. Here, you’re not just a number: your project matters to us and we’ll be there to support you at every step.",
+    "p4": "Because if you succeed, so do we."
+  },
+  "services": {
+    "title": "Our <1>Services</1>",
+    "subtitle": "What we can do for your business",
+    "list": [
+      {
+        "title": "Full Stack Web Development",
+        "desc": "Professional websites, from custom builds to WordPress. Responsive, fast, and secure—tailored to your needs."
+      },
+      {
+        "title": "Online Stores (E-commerce)",
+        "desc": "Online stores optimized to convert, with secure payment gateways and an easy-to-use management panel."
+      },
+      {
+        "title": "Portfolios & Landing Pages",
+        "desc": "Impactful landing pages and portfolios, focused on UX and conversion to attract clients or showcase services."
+      },
+      {
+        "title": "Custom Solutions",
+        "desc": "Consulting and custom development: automations, integrations, and specific features for your business."
+      }
+    ],
+    "cta": "Request a quote"
+  },
+  "projects": {
+    "title": "Projects",
+    "proclub": {
+      "title": "ProClub",
+      "desc": "We designed and developed ProClub’s website in WordPress to provide an attractive, fast, and easy-to-manage platform for the gym.",
+      "caption": "Website Design",
+      "button": "VIEW PROJECT"
+    }
+  },
+  "testimonial": {
+    "title": "Testimonials",
+    "subtitle": "What they say about us",
+    "text": "Working with Lorenzo Muñoz has been an exceptional experience. Creating an app made my personalized training system much easier, and now everything works organically without the stress of scheduling every class for my clients. With the app, we made the gym more organized, and everyone loves the new system. We’re already planning to move to a native app because the web version was so successful that it’s pushing us to the next level—and of course, we’ll do it to keep improving quality and personalization.",
+    "author": "Franco Meloni",
+    "role": "CEO of ProClub"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Write to us and let's plan your project",
+    "channels": "Direct channels",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "interest": "Interest (optional)",
+      "interestPlaceholder": "Select an option",
+      "message": "Message",
+      "messagePlaceholder": "Tell us briefly about your idea…",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "ok": "Message sent! We’ll get back to you soon.",
+      "err": "Error sending. Please try again or contact us via WhatsApp."
+    },
+    "interestOptions": {
+      "web": "Web Development",
+      "ecommerce": "Online Store",
+      "landing": "Landing / Portfolio",
+      "custom": "Custom Solution"
+    }
+  }
+}

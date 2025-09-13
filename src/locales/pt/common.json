@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre Gerald.Dev",
+    "services": "Serviços",
+    "projects": "Trabalhos",
+    "contact": "Contato"
+  },
+  "hero": {
+  "title": "Construindo <0>experiências</0><1/>que fazem a <2>diferença</2>.",
+  "subtitle": "Desenvolvimento Web e Apps Profissionais Sob Medida."
+  },
+  "about": {
+    "title": "Sobre <1>Gerald</1><3>.Dev</3>",
+    "p1": "Na Gerald.Dev, adoramos transformar ideias em soluções digitais que realmente funcionam. Fazemos desenvolvimento web e aplicativos móveis sob medida, pensados para impulsionar seu negócio, sem complicações técnicas.",
+    "p2": "Trabalhamos lado a lado com empreendedores e pequenas empresas porque entendemos suas necessidades e sabemos como levar seu negócio para o próximo nível: produtos que funcionam, crescem e geram resultados.",
+    "p3": "Prezamos por uma comunicação clara, próxima e sem enrolação. Aqui, você não é apenas um número: seu projeto é importante para nós e estaremos presentes em cada etapa.",
+    "p4": "Porque se você tem sucesso, nós também temos."
+  },
+  "services": {
+    "title": "Nossos <1>Serviços</1>",
+    "subtitle": "O que podemos fazer pelo seu negócio",
+    "list": [
+      {
+        "title": "Desenvolvimento Web Full Stack",
+        "desc": "Criação de sites profissionais, desde projetos sob medida até WordPress. Sites responsivos, rápidos e seguros, adaptados às suas necessidades."
+      },
+      {
+        "title": "Lojas Online (E-commerce)",
+        "desc": "Lojas online otimizadas para conversão, com gateways de pagamento seguros e painel de gestão fácil de usar."
+      },
+      {
+        "title": "Portfólios e Landing Pages",
+        "desc": "Landing pages e portfólios de impacto, focados em UX e conversão para atrair clientes ou divulgar serviços."
+      },
+      {
+        "title": "Soluções Personalizadas",
+        "desc": "Consultoria e desenvolvimento sob medida: automações, integrações e funcionalidades específicas para o seu negócio."
+      }
+    ],
+    "cta": "Solicitar orçamento"
+  },
+  "projects": {
+    "title": "Trabalhos",
+    "proclub": {
+      "title": "ProClub",
+      "desc": "Desenvolvemos o site da ProClub em WordPress para oferecer uma plataforma atraente, rápida e fácil de administrar para a academia.",
+      "caption": "Website Design",
+      "button": "VER TRABALHO"
+    }
+  },
+  "testimonial": {
+    "title": "Depoimentos",
+    "subtitle": "O que dizem sobre nós",
+    "text": "Trabalhar com Lorenzo Muñoz foi uma experiência excepcional. Criar um app facilitou meu sistema de treinos personalizados e agora tudo funciona de forma orgânica, sem o estresse de agendar cada aula dos alunos. Com o app, organizamos a academia e os alunos adoraram o novo sistema. Já estamos pensando em migrar para um app nativo porque a versão web foi tão bem-sucedida que isso nos impulsiona para o próximo nível — e claro, vamos fazer para continuar potencializando a qualidade e o atendimento personalizado.",
+    "author": "Franco Meloni",
+    "role": "CEO da ProClub"
+  },
+  "contact": {
+    "title": "Contato",
+    "subtitle": "Fale conosco e vamos planejar seu projeto",
+    "channels": "Canais diretos",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "interest": "Interesse (opcional)",
+      "interestPlaceholder": "Escolha uma opção",
+      "message": "Mensagem",
+      "messagePlaceholder": "Conte brevemente sua ideia…",
+      "submit": "Enviar mensagem",
+      "sending": "Enviando…",
+      "ok": "Mensagem enviada! Retornaremos em breve.",
+      "err": "Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp."
+    },
+    "interestOptions": {
+      "web": "Desenvolvimento Web",
+      "ecommerce": "Loja Online",
+      "landing": "Landing / Portfólio",
+      "custom": "Solução Personalizada"
+    }
+  }
+}

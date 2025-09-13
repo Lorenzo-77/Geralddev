@@ -1,17 +1,19 @@
+import { useTranslation } from "react-i18next";
 import "./Projects.css";
 
 export default function Projects() {
+  const { t } = useTranslation();
+
   return (
     <section className="projects-section" id="proyectos" aria-labelledby="projects-title">
       <div className="projects-aurora projects-aurora--left" aria-hidden="true" />
       <div className="projects-aurora projects-aurora--right" aria-hidden="true" />
 
       <header className="projects-header">
-        <h2 className="section-title" id="projects-title">Trabajos</h2>
+        <h2 className="section-title" id="projects-title">{t('projects.title')}</h2>
       </header>
 
       <article className="project-card">
-        {/* Lienzo de fondo */}
         <div className="project-canvas" aria-hidden="true"></div>
 
         <div className="project-media">
@@ -23,15 +25,11 @@ export default function Projects() {
         </div>
 
         <div className="project-content">
-          <h3 className="project-title">ProClub</h3>
+          <h3 className="project-title">{t('projects.proclub.title')}</h3>
 
-          <p className="project-lead">
-            Diseñamos y desarrollamos el sitio web de ProClub en WordPress para
-            brindar una plataforma atractiva, rápida y simple de administrar
-            para el gimnasio.
-          </p>
+          <p className="project-lead">{t('projects.proclub.desc')}</p>
 
-          <p className="project-caption">Website Design</p>
+          <p className="project-caption">{t('projects.proclub.caption')}</p>
 
           <div className="project-cta">
             <a
@@ -40,7 +38,7 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              VER TRABAJO <span className="project-button-arrow">→</span>
+              {t('projects.proclub.button')} <span className="project-button-arrow">→</span>
             </a>
           </div>
         </div>

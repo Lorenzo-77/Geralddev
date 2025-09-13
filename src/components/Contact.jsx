@@ -1,9 +1,10 @@
-// src/components/Contact.jsx
 import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 export default function Contact() {
+  const { t } = useTranslation();
   const formRef = useRef(null);
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState(null);
@@ -19,12 +20,12 @@ export default function Contact() {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
       );
       formRef.current.reset();
-      setStatus({ ok: true, msg: "¡Mensaje enviado! Te respondemos a la brevedad." });
+      setStatus({ ok: true, msg: t("contact.form.ok") });
     } catch (err) {
-      setStatus({ ok: false, msg: "Error al enviar. Probá otra vez o escribinos por WhatsApp." });
+      setStatus({ ok: false, msg: t("contact.form.err") });
     } finally {
       setSending(false);
     }
@@ -36,13 +37,13 @@ export default function Contact() {
       <div className="contact-aurora contact-aurora--right" aria-hidden="true" />
 
       <header className="contact-header">
-        <h2 className="contact-title" id="contact-title">Contacto</h2>
-        <p className="contact-subtitle">Escribinos y coordinamos tu proyecto</p>
+        <h2 className="contact-title" id="contact-title">{t("contact.title")}</h2>
+        <p className="contact-subtitle">{t("contact.subtitle")}</p>
       </header>
 
       <div className="contact-grid">
         <aside className="contact-aside">
-          <p className="contact-aside-title">Canales directos</p>
+          <p className="contact-aside-title">{t("contact.channels")}</p>
           <div className="contact-actions">
             <a
               className="icon-btn"
@@ -52,7 +53,7 @@ export default function Contact() {
               aria-label="WhatsApp"
               title="WhatsApp"
             >
-               <img src={`${import.meta.env.BASE_URL}img/whatsapp.webp`} alt="WhatsApp" />
+              <img src={`${import.meta.env.BASE_URL}img/whatsapp.webp`} alt="WhatsApp" />
             </a>
 
             <a
@@ -79,33 +80,39 @@ export default function Contact() {
 
         <form ref={formRef} className="contact-form" onSubmit={onSubmit}>
           <div className="form-field">
-            <label htmlFor="name">Nombre</label>
-            <input id="name" name="user_name" type="text" placeholder="Tu nombre" required />
+            <label htmlFor="name">{t("contact.form.name")}</label>
+            <input id="name" name="user_name" type="text" placeholder={t("contact.form.name")} required />
           </div>
 
           <div className="form-field">
-            <label htmlFor="email">Email</label>
-            <input id="email" name="user_email" type="email" placeholder="tu@email.com" required />
+            <label htmlFor="email">{t("contact.form.email")}</label>
+            <input id="email" name="user_email" type="email" placeholder={t("contact.form.email")} required />
           </div>
 
           <div className="form-field">
-            <label htmlFor="service">Interés (opcional)</label>
+            <label htmlFor="service">{t("contact.form.interest")}</label>
             <select id="service" name="service" defaultValue="">
-              <option value="" disabled>Elegí una opción</option>
-              <option value="web">Desarrollo Web</option>
-              <option value="ecommerce">Tienda Online</option>
-              <option value="landing">Landing / Portfolio</option>
-              <option value="custom">Solución Personalizada</option>
+              <option value="" disabled>{t("contact.form.interestPlaceholder")}</option>
+              <option value="web">{t("contact.interestOptions.web")}</option>
+              <option value="ecommerce">{t("contact.interestOptions.ecommerce")}</option>
+              <option value="landing">{t("contact.interestOptions.landing")}</option>
+              <option value="custom">{t("contact.interestOptions.custom")}</option>
             </select>
           </div>
 
           <div className="form-field">
-            <label htmlFor="message">Mensaje</label>
-            <textarea id="message" name="message" rows={5} placeholder="Contanos brevemente tu idea…" required />
+            <label htmlFor="message">{t("contact.form.message")}</label>
+            <textarea
+              id="message"
+              name="message"
+              rows={5}
+              placeholder={t("contact.form.messagePlaceholder")}
+              required
+            />
           </div>
 
           <button className="contact-submit" type="submit" disabled={sending}>
-            {sending ? "Enviando…" : "Enviar mensaje"}
+            {sending ? t("contact.form.sending") : t("contact.form.submit")}
           </button>
 
           {status && (

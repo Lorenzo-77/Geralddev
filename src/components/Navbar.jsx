@@ -1,18 +1,20 @@
-// src/components/Navbar.jsx
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from './LanguageSelector';
 import './Navbar.css';
 
 const items = [
-  { label: 'Inicio', id: 'inicio' },
-  { label: 'Sobre Gerald.Dev', id: 'sobre' },
-  { label: 'Servicios', id: 'servicios' },
-  { label: 'Trabajos', id: 'proyectos' },
-  { label: 'Contacto', id: 'contacto' },
+  { key: 'home', id: 'inicio' },
+  { key: 'about', id: 'sobre' },
+  { key: 'services', id: 'servicios' },
+  { key: 'projects', id: 'proyectos' },
+  { key: 'contact', id: 'contacto' }
 ];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useTranslation();
 
   const toggleMenu = () => setMenuOpen(v => !v);
 
@@ -61,7 +63,7 @@ export default function Navbar() {
       <div
         className={`navbar-toggle ${menuOpen ? 'open' : ''}`}
         onClick={toggleMenu}
-        aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+        aria-label={menuOpen ? t('nav.closeMenu', 'Cerrar menú') : t('nav.openMenu', 'Abrir menú')}
         role="button"
         tabIndex={0}
         onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && toggleMenu()}
@@ -78,10 +80,13 @@ export default function Navbar() {
               className="navbar-button"
               onClick={() => scrollToSection(item.id)}
             >
-              {item.label}
+              {t(`nav.${item.key}`)}
             </button>
           </li>
         ))}
+        <li>
+          <LanguageSelector />
+        </li>
       </ul>
     </nav>
   );
